@@ -1,9 +1,9 @@
 ﻿(function () {
-    var homeIndexsModule = angular.module("HomeIndex", ['ngRoute']);
+    var homeIndexModule = angular.module("HomeIndex", ['ngRoute']);
 
     homeIndexModule.config(["$routeProvider", function ($routeProvider) {
         $routeProvider.when("/", {
-            controller: "HomeController",
+            controller: "ProductsController",
             templateUrl: "/Templates/ProductsView.html"
         });
         

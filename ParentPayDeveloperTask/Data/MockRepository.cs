@@ -7,7 +7,7 @@ namespace ParentPayDeveloperTask.Data
 {
     public class MockRepository : IRepository
     {
-        private static Category[] categories = new Category[]
+        private Category[] categories = new Category[]
         {
             new Category()
             {
@@ -21,6 +21,7 @@ namespace ParentPayDeveloperTask.Data
                 CategoryId = 2,
                 Name = "Boys Clothing",
                 Description = "Clothing for boys",
+                Products = products.Where(p=>p.CategoryId == 2).ToArray()
             }
         };
 
@@ -40,5 +41,9 @@ namespace ParentPayDeveloperTask.Data
         {
             return categories.AsQueryable();
         }
+        //public IQueryable<Product> GetProductsByCategory(int categoryId)
+        //{
+        //    return products.Where(p=>p.CategoryId == categoryId).AsQueryable();
+        //}
     }
 }
