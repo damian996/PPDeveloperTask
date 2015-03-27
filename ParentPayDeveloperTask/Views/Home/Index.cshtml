@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ParentPayDeveloperTask.Data.Category>
+@{
+    ViewBag.Title = "Products";
+    ViewBag.InitModule = "HomeIndex";
+}
+@section scripts{
+    <script src="~/JS/app.min.js"></script>
+    <script src="~/JS/home-index.min.js"></script>
+}
+<div ng-view></div>
+
