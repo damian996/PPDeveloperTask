@@ -29,7 +29,7 @@
                 </div>
             </section>
         </div>
-        <div class="col-md-4" ng-hide="pc.basket.total == 0" class="product-item">
+        <div class="col-md-6" ng-hide="pc.basket.total == 0" class="product-item">
             <section>
                 <div>
                     <div><h4>Shopping Basket</h4></div>
@@ -40,8 +40,8 @@
                         <div class="col-md-4">{{item.quantity}} x {{item.unitPrice | currency:'£'}}</div>
                         <div class="col-md-4"><a href ng-click="pc.removeFromTheBasket(item)">Remove</a></div>
                     </div>
-                    <hr />
-                    <br /><div style="padding-top:15px">
+                    <div><hr /></div>
+                    <div>
                         <div><h4>Total: <em>{{pc.basket.total | currency:'£'}}</em></h4></div>
                         <div><button class="btn btn-primary" ng-click="pc.checkout(pc.basket)">Checkout</button></div>
                     </div>
