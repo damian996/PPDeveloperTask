@@ -11,7 +11,7 @@
 <div class="col-md-12" ng-controller="ProductController as pc">
     <div ng-hide="pc.orderConfirmed === 1">
         <ul class="nav nav-pills">
-            <li ng-class="{active: pc.isCategorySelected(category.categoryId)}" ng-repeat="category in pc.data.categories"><a href ng-click="pc.selectCategory(category.categoryId)">{{category.name}} {{category.categoryId}}</a></li>
+            <li ng-class="{active: pc.isCategorySelected(category.categoryId)}" ng-repeat="category in pc.data.categories"><a href ng-click="pc.selectCategory(category.categoryId)">{{category.name}}</a></li>
         </ul>
         <hr />  
         <div class="col-md-6">
@@ -51,13 +51,16 @@
     </div>
     <div ng-show="pc.orderConfirmed === 1">
         <section>
-            <h4>Order Confirmed</h4>
+            <div class="col-md-12"><h4><b>Order Confirmed</b></h4></div>
             <div class="basket col-md-6">
-                <div ng-repeat="item in pc.basket.basketItems">
+                <h4><em>Order Summary</em></h4>
+                <div class="col-md-12" ng-repeat="item in pc.basket.basketItems">
                     <div class="col-md-6">{{item.name}}</div>
                     <div class="col-md-6">{{item.quantity}} x {{item.unitPrice | currency:'£'}}</div>
                 </div>
+                <div class="col-md-12"><h4>Total: <em>{{pc.basket.total | currency:'£'}}</em></h4></div>
             </div>
+            
         </section>
     </div>
 </div>
