@@ -18,6 +18,12 @@ namespace ParentPayDeveloperTask
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "OrderConfirmation",
+                url: "Home/OrderConfirmation/{id}",
+                defaults: new { controller = "Home", action = "OrderConfirmation", id = UrlParameter.Optional }
+            );
         }
     }
 }

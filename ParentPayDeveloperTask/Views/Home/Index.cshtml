@@ -7,5 +7,37 @@
     <script src="~/JS/app.js"></script>
     <script src="~/JS/home-index.js"></script>
 }
+<div class="col-md-12" ng-controller="ProductController as pc">
+    <div class="col-md-6">
+        <section>
+            <ul class="nav nav-pills">
+                <li ng-class="{active: pc.isCategorySelected(category.categoryId)}" ng-repeat="category in pc.data.categories"><a href ng-click="pc.selectCategory(category.categoryId)">{{category.name}} {{category.categoryId}}</a></li>
+            </ul>
+            <div class="panel" ng-repeat="category in pc.data.categories" ng-show="pc.isCategorySelected(category.categoryId)">
 
-<div ng-view></div>
+
+                <div ng-repeat="product in category.products">
+                    <div class="col-md-4 product-item">{{product.name}}</div>
+                    <div class="col-md-4 product-item"><em>{{product.unitPrice | currency:'£'}}</em></div>
+
+
+                    <div class="col-md-4 product-item"><button class="btn btn-primary" ng-click="pc.addToTheBasket(product)">Buy</button></div>
+
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <div class="col-md-6" ng-hide="pc.basket.total == 0">
+        <div ng-repeat="item in pc.basket.basketItems">
+            <div>{{item.name}}</div>
+            <div>{{item.quantity}}</div>
+            <a href ng-click="pc.removeFromTheBasket(item)">Remove</a>
+        </div>
+        <div>total {{pc.basket.total}}</div>
+        <div><button class="btn btn-primary" ng-click="pc.checkout(pc.basket)">Checkout</button></div>
+    </div>
+</div>
+
+    

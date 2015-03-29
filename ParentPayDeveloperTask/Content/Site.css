@@ -16,3 +16,9 @@ textarea {
     max-width: 280px;
 }
 
+.product-item{
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    padding-bottom: 3px;
+}
+

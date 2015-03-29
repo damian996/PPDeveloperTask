@@ -35,15 +35,24 @@ namespace ParentPayDeveloperTask.Data
                 ProductCode = "UCL001",
                 CategoryId = 1
             },
+            new Product()
+            {
+                ProductId = 2,
+                Name = "TShirt",
+                UnitPrice = 35M,
+                ProductCode = "UCL002",
+                CategoryId = 1
+            },
         };
 
-        public IQueryable<Category> GetCategories()
+        public IQueryable<Category> GetAllProducts()
         {
             return categories.AsQueryable();
         }
-        //public IQueryable<Product> GetProductsByCategory(int categoryId)
-        //{
-        //    return products.Where(p=>p.CategoryId == categoryId).AsQueryable();
-        //}
+
+        public Product GetProduct(int productId)
+        {
+            return products.Where(p => p.ProductId == productId).Single();
+        }
     }
 }

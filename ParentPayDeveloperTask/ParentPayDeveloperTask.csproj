@@ -126,8 +126,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
-    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\Basket.cs" />
+    <Compile Include="Data\BasketItem.cs" />
     <Compile Include="Data\Category.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\MockRepository.cs" />
@@ -149,10 +152,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Icon.png" />
-    <Content Include="JS\app.js" />
-    <Content Include="JS\app.min.js">
-      <DependentUpon>app.js</DependentUpon>
-    </Content>
     <Content Include="JS\home-index.js" />
     <Content Include="JS\home-index.min.js">
       <DependentUpon>home-index.js</DependentUpon>
@@ -931,9 +930,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="JS\app.min.js.map">
-      <DependentUpon>app.min.js</DependentUpon>
-    </Content>
     <Content Include="JS\home-index.min.js.map">
       <DependentUpon>home-index.min.js</DependentUpon>
     </Content>
@@ -942,7 +938,6 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\npm.js" />
-    <Content Include="Templates\ProductsView.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -955,6 +950,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\OrderConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
