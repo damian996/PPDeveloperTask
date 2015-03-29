@@ -16,9 +16,20 @@ textarea {
     max-width: 280px;
 }
 
-.product-item{
-    border-bottom-style: solid;
-    border-bottom-width: thin;
-    padding-bottom: 3px;
+.product-item {
+  border: 1px solid #aaaaaa;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #eaeaea;
+  margin-left: 0px;
+  margin-right: -20px;
 }
+
+.basket{
+    border-radius: 5px; 
+    border: 2px solid #800000;
+    padding: 10px;
+}
+
 

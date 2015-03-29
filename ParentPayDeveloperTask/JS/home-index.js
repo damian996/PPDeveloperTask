@@ -27,22 +27,15 @@
     }]);
 
     homeIndexModule.factory("checkoutService", ["$http", "$q", function ($http, $q) {
-        var _basket = [];
+        var _basket = {};
 
         var _checkout = function (basket) {
 
             var deferred = $q.defer();
 
-            $http.post("api/checkout",
-                JSON.stringify(basket),
-                {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
+            $http.post("api/checkout",basket)
                    .then(function (response) {
                        angular.copy(response.data, _basket);
-                       _isInit = true;
                        deferred.resolve();
                    },
                    function () {
@@ -52,16 +45,17 @@
             return deferred.promise;
         };
         return {
-            basket: _basket,
+            processedBasket: _basket,
             checkout: _checkout
         };
     }]);
 
-    var ProductController = ["$scope", "$window", "dataService", "checkoutService", function ($scope, $window, dataService, checkoutService) {
+    var ProductController = ["$scope", "$window", "$http", "dataService", "checkoutService", function ($scope, $window, $http, dataService, checkoutService) {
         this.selectedCategory = 1;
         this.basket = {};
         this.basket.total = 0;
         this.basket.basketItems = [];
+        this.orderConfirmed = 0;
 
         this.data = dataService;
         dataService.getProducts()
@@ -102,18 +96,18 @@
             this.basket.basketItems.splice(index, 1);
         }
 
-        this.checkout = function (basket) {
-            checkoutService.checkout(basket)
-            .then(function (basket) {
-                this.basket = basket;
-                $window.location = 'Home/OrderConfirmation';
+        this.checkout = function () {
+            var error = false;
+            checkoutService.checkout(this.basket)
+            .then(function () {
             },
             function () {
                 //error
+                error = true;
                 alert("Checkout error!");
             })
+            if(error == false) this.orderConfirmed = 1;
         }
-
     }];
 
     homeIndexModule.controller("ProductController", ProductController);

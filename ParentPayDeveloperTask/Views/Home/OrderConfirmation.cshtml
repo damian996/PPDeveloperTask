@@ -1,7 +1,11 @@
-﻿
+﻿@model ParentPayDeveloperTask.Data.Basket
 @{
     ViewBag.Title = "OrderConfirmation";
 }
 
-<h2>OrderConfirmation</h2>
-
+<h2>Order Confirmation</h2>
+@Model.Total
+@foreach (var item in Model.BasketItems)
+{
+    <div>@item.Name;</div>
+}

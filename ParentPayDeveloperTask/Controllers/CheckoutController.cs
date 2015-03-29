@@ -13,11 +13,15 @@ namespace ParentPayDeveloperTask.Controllers
     {
         public HttpResponseMessage Post(Basket basket)
         {
-
-            return Request.CreateResponse(HttpStatusCode.Created, basket);
-            
-
-            //return Request.CreateResponse(HttpStatusCode.BadRequest);
+            try
+            {
+                //Process the order and return result to the client side
+                return Request.CreateResponse(HttpStatusCode.OK, basket);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
         }
     }
 }

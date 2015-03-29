@@ -43,6 +43,14 @@ namespace ParentPayDeveloperTask.Data
                 ProductCode = "UCL002",
                 CategoryId = 1
             },
+            new Product()
+            {
+                ProductId = 3,
+                Name = "Shirt",
+                UnitPrice = 25M,
+                ProductCode = "UCL003",
+                CategoryId = 1
+            },
         };
 
         public IQueryable<Category> GetAllProducts()
