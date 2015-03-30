@@ -144,10 +144,5 @@ namespace ParentPayDeveloperTask.Data
         {
             return categories.AsQueryable();
         }
-
-        public Product GetProduct(int productId)
-        {
-            return products.Where(p => p.ProductId == productId).Single();
-        }
     }
 }

@@ -11,7 +11,6 @@
             $http.get("api/products")
                    .then(function (response) {
                        angular.copy(response.data, _categories);
-                       _isInit = true;
                        deferred.resolve();
                    },
                    function () {
@@ -50,16 +49,16 @@
         };
     }]);
 
-    var ProductController = ["$scope", "$window", "$http", "dataService", "checkoutService", function ($scope, $window, $http, dataService, checkoutService) {
+    var ProductController = ["dataService", "checkoutService", function (dataService, checkoutService) {
         this.selectedCategory = 1;
         this.basket = {};
+        this.processedBasket = {};
         this.basket.total = 0;
         this.basket.basketItems = [];
-        this.orderConfirmed = 0;
 
         this.data = dataService;
         dataService.getProducts()
-            .then(function (data) {
+            .then(function () {
                 //success
             },
             function () {
@@ -95,18 +94,15 @@
             this.basket.total -= item.quantity * item.unitPrice;
             this.basket.basketItems.splice(index, 1);
         }
-
-        this.checkout = function () {
-            var error = false;
-            checkoutService.checkout(this.basket)
+        this.processedBasket = checkoutService.processedBasket;
+        this.checkout = function(basket){
+            checkoutService.checkout(basket)
             .then(function () {
             },
             function () {
                 //error
-                error = true;
                 alert("Checkout error!");
-            })
-            if(error == false) this.orderConfirmed = 1;
+            })            
         }
     }];
 

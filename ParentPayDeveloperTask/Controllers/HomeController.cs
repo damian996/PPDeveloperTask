@@ -14,10 +14,5 @@ namespace ParentPayDeveloperTask.Controllers
         {
             return View();
         }
-
-        public ActionResult OrderConfirmation(string basket)
-        {
-            return View("OrderConfirmation", basket);
-        }
     }
 }

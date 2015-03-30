@@ -16,6 +16,9 @@ namespace ParentPayDeveloperTask.Controllers
             try
             {
                 //Process the order and return result to the client side
+                //Pretend that the basket ID is order confirmation number
+
+                basket.BasketId = 12345;
                 return Request.CreateResponse(HttpStatusCode.OK, basket);
             }
             catch

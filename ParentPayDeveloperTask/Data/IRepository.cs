@@ -9,6 +9,5 @@ namespace ParentPayDeveloperTask.Data
     public interface IRepository
     {
         IQueryable<Category> GetAllProducts();
-        Product GetProduct(int productId);
     }
 }
