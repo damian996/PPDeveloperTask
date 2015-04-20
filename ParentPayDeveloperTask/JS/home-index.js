@@ -98,6 +98,7 @@
         this.checkout = function(basket){
             checkoutService.checkout(basket)
             .then(function () {
+
             },
             function () {
                 //error
