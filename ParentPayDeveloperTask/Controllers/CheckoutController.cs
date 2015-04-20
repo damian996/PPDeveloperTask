@@ -7,30 +7,37 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using ParentPayDeveloperTask.Helpers;
 
 namespace ParentPayDeveloperTask.Controllers
 {
     public class CheckoutController : ApiController
     {
+        BasketHelpers _basketHelpers;
+
+        public CheckoutController()
+        {
+            _basketHelpers = new BasketHelpers();
+        }
         public HttpResponseMessage Post(Basket basket)
         {
             try
             {
-                //Process the order and return result to the client side
-                //Pretend that the basket ID is order confirmation number
+                var basketId = _basketHelpers.ProcessBasket(basket);
 
-                Random rnd = new Random();
+                return Request.CreateResponse(HttpStatusCode.OK, basketId);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+        }
 
-                basket.BasketId = rnd.Next(1000, 9999);
-
-                string json = Newtonsoft.Json.JsonConvert.SerializeObject(basket);
-
-                var fileName = String.Format("{0}.txt", basket.BasketId);
-                var filePath = System.Web.HttpContext.Current.Server.MapPath(fileName);
-                
-                //write string to file
-                using (File.Create(filePath)) { }
-                File.WriteAllText(filePath, json);                
+        public HttpResponseMessage Get(int basketId)
+        {
+            try
+            {
+                var basket = _basketHelpers.GetBasket(basketId);
 
                 return Request.CreateResponse(HttpStatusCode.OK, basket);
             }

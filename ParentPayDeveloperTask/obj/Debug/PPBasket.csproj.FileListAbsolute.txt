@@ -33,3 +33,38 @@ C:\Training\Test Projects\PPBasket\ParentPayDeveloperTask\bin\System.Web.WebPage
 C:\Training\Test Projects\PPBasket\ParentPayDeveloperTask\obj\Debug\PPBasket.csprojResolveAssemblyReference.cache
 C:\Training\Test Projects\PPBasket\ParentPayDeveloperTask\obj\Debug\ParentPayDeveloperTask.dll
 C:\Training\Test Projects\PPBasket\ParentPayDeveloperTask\obj\Debug\ParentPayDeveloperTask.pdb
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\ParentPayDeveloperTask.dll.config
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\ParentPayDeveloperTask.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\ParentPayDeveloperTask.pdb
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Newtonsoft.Json.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Ninject.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Ninject.Web.Common.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Ninject.Web.Mvc.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Net.Http.Formatting.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Helpers.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Http.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Http.WebHost.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Mvc.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Razor.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.WebPages.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.WebPages.Razor.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\WebActivatorEx.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\WebApiContrib.IoC.Ninject.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Newtonsoft.Json.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Ninject.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Ninject.Web.Common.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\Ninject.Web.Mvc.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Net.Http.Formatting.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Helpers.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Http.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Http.WebHost.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Mvc.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.Razor.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.WebPages.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\bin\System.Web.WebPages.Razor.xml
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\obj\Debug\PPBasket.csprojResolveAssemblyReference.cache
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\obj\Debug\ParentPayDeveloperTask.dll
+C:\Projects\ParentPayDeveloperTask\ParentPayDeveloperTask\obj\Debug\ParentPayDeveloperTask.pdb

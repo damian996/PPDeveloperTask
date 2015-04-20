@@ -1,0 +1,13 @@
+﻿<div class="col-md-12">
+        <section>
+            <div class="col-md-12"><h4><b>Order number: {{data.basket.basketId}}. Status: Confirmed</b></h4></div>
+            <div class="basket col-md-6">
+                <h4><em>Order Summary</em></h4>
+                <div class="col-md-12" ng-repeat="item in data.basket.basketItems">
+                    <div class="col-md-6">{{item.name}}</div>
+                    <div class="col-md-6">{{item.quantity}} x {{item.unitPrice | currency:'£'}}</div>
+                </div>
+                <div class="col-md-12"><h4>Total: <em>{{data.basket.total | currency:'£'}}</em></h4></div>
+            </div>
+        </section>
+</div>
