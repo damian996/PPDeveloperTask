@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ParentPayDeveloperTask.Helpers
 {
-    public class BasketHelpers
+    public class MockBasketHelper : IBasketHelper
     {
         public int ProcessBasket(Basket basket)
         {

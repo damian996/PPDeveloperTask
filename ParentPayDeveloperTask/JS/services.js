@@ -25,6 +25,26 @@
             getProducts: _getProducts
         };
     }]);
+    
+    app.factory("checkoutService", ["$http", "$q", function ($http, $q) {
+        var _checkout = function (basket) {
+
+            var deferred = $q.defer();
+
+            $http.post("api/checkout", basket)
+                   .then(function (response) {
+                       deferred.resolve(response.data);
+                   },
+                   function () {
+                       //Error
+                       deferred.reject();
+                   });
+            return deferred.promise;
+        };
+        return {
+            checkout: _checkout
+        };
+    }]);
 
     app.factory("orderService", ["$http", "$q", function ($http, $q) {
         var _basket = {};
@@ -48,30 +68,6 @@
         return {
             basket: _basket,
             getOrder: _getOrder
-        };
-    }]);
-
-    app.factory("checkoutService", ["$http", "$q", function ($http, $q) {
-        //var _basketId = {};
-
-        var _checkout = function (basket) {
-
-            var deferred = $q.defer();
-
-            $http.post("api/checkout", basket)
-                   .then(function (response) {
-                       //angular.copy(response.data, _basketId);
-                       deferred.resolve(response.data);
-                   },
-                   function () {
-                       //Error
-                       deferred.reject();
-                   });
-            return deferred.promise;
-        };
-        return {
-            //processedBasketId: _basketId,
-            checkout: _checkout
         };
     }]);
 }());

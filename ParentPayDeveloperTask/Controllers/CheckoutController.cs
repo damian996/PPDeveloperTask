@@ -13,11 +13,11 @@ namespace ParentPayDeveloperTask.Controllers
 {
     public class CheckoutController : ApiController
     {
-        BasketHelpers _basketHelpers;
+        IBasketHelper _basketHelpers;
 
-        public CheckoutController()
+        public CheckoutController(IBasketHelper basketHelper)
         {
-            _basketHelpers = new BasketHelpers();
+            _basketHelpers = basketHelper;
         }
         public HttpResponseMessage Post(Basket basket)
         {

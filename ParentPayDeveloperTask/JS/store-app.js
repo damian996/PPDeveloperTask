@@ -5,14 +5,13 @@
         
         $scope.selectedCategory = 1;
         $scope.basket = {};
-        //$scope.processedBasket = {};
         $scope.basket.total = 0;
         $scope.basket.basketItems = [];
 
         $scope.data = dataService;
         dataService.getProducts()
-            .then(function () {
-                //success
+            .then(function (products) {
+                //success - do nothing, products will be loaded automatically to the scope object        
             },
             function () {
                 //error
@@ -47,7 +46,7 @@
             this.basket.total -= item.quantity * item.unitPrice;
             this.basket.basketItems.splice(index, 1);
         }
-        //this.processedBasketId = checkoutService.processedBasketId;
+
         $scope.checkout = function(basket){
             checkoutService.checkout(basket)
             .then(function (basketId) {

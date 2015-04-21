@@ -13,6 +13,7 @@ namespace ParentPayDeveloperTask.App_Start
     using System.Web.Http;
     using WebApiContrib.IoC.Ninject;
     using ParentPayDeveloperTask.Data;
+    using ParentPayDeveloperTask.Helpers;
 
     public static class NinjectWebCommon 
     {
@@ -70,9 +71,11 @@ namespace ParentPayDeveloperTask.App_Start
         {
 #if DEBUG
             kernel.Bind<IRepository>().To<MockRepository>().InRequestScope();
+            kernel.Bind<IBasketHelper>().To<MockBasketHelper>().InRequestScope();
 #else
             //this should be changed to inject real repository when project is connected to the database
             kernel.Bind<IRepository>().To<MockRepository>().InRequestScope();
+            kernel.Bind<IBasketHelper>().To<MockBasketHelper>().InRequestScope();
 #endif
         }        
     }
