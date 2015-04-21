@@ -1,0 +1,3 @@
+﻿<ul class="nav nav-pills">
+    <li ng-class="{active: isCategorySelected(category.categoryId)}" ng-repeat="category in data.categories"><a href ng-click="selectCategory(category.categoryId)">{{category.name}}</a></li>
+</ul>

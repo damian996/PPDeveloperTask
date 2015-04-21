@@ -1,0 +1,17 @@
+﻿<section>
+    <div>
+        <div><h4>Shopping Basket</h4></div>
+    </div>
+    <div class="basket col-md-12">
+        <div ng-repeat="item in basket.basketItems">
+            <div class="col-md-4">{{item.name}}</div>
+            <div class="col-md-4">{{item.quantity}} x {{item.unitPrice | currency:'£'}}</div>
+            <div class="col-md-4"><a href ng-click="removeFromTheBasket(item)">Remove</a></div>
+        </div>
+        <div><hr /></div>
+        <div class="col-md-12">
+            <div><h4>Total: <em>{{basket.total | currency:'£'}}</em></h4></div>
+            <div><button class="btn btn-primary" ng-click="checkout(basket)">Checkout</button></div>
+        </div>
+    </div>
+</section>

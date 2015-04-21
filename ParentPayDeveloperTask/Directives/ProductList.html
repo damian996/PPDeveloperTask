@@ -1,0 +1,13 @@
+﻿<section>
+    <div class="row">
+        <div class="col-md-4"><h4>Product Name</h4></div>
+        <div class="col-md-4"><h4><em>Price</em></h4></div>
+    </div>
+    <div class="panel" ng-repeat="category in data.categories" ng-show="isCategorySelected(category.categoryId)">
+        <div class="product-item row" ng-repeat="product in category.products">
+            <div class="col-md-4">{{product.name}}</div>
+            <div class="col-md-4"><em>{{product.unitPrice | currency:'£'}}</em></div>
+            <div class="col-md-4p pull-right"><button class="btn btn-primary" ng-click="addToTheBasket(product)">Buy</button></div>
+        </div>
+    </div>
+</section>

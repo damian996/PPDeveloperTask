@@ -1,7 +1,7 @@
 ﻿(function () {
-    var homeIndexModule = angular.module("HomeIndex", ['ngRoute']);
+    var app = angular.module("StoreApp", ['ngRoute']);
 
-    homeIndexModule.config(["$routeProvider", function ($routeProvider) {
+    app.config(["$routeProvider", function ($routeProvider) {
         $routeProvider.when("/", {
             controller: "ProductController",
             templateUrl: "/Templates/ProductsView.html"
@@ -14,4 +14,6 @@
 
         $routeProvider.otherwise({ redirectTo: "/" });
     }]);
+
+    
 }());
