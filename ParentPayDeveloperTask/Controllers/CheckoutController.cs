@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using ParentPayDeveloperTask.Helpers;
+using ParentPayDeveloperTask.Models;
 
 namespace ParentPayDeveloperTask.Controllers
 {

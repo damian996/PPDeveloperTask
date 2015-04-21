@@ -1,4 +1,4 @@
-﻿using ParentPayDeveloperTask.Data;
+﻿using ParentPayDeveloperTask.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,10 +20,9 @@ namespace ParentPayDeveloperTask.Helpers
             var fileName = String.Format("{0}.txt", basket.BasketId);
             var filePath = System.Web.HttpContext.Current.Server.MapPath(fileName);
 
-            //write string to file
-            using (File.Create(filePath)) { }
+            File.Create(filePath).Dispose();
             File.WriteAllText(filePath, json);
-
+  
             return basket.BasketId;
         }
 

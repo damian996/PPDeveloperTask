@@ -1,0 +1,1 @@
+{"BasketId":9901,"Total":47.93000000000001,"BasketItems":[{"BasketItemId":0,"ProductId":12,"Name":"Shirt","UnitPrice":4.99,"Quantity":5,"BasketId":0},{"BasketItemId":0,"ProductId":11,"Name":"Skirt","UnitPrice":5.5,"Quantity":2,"BasketId":0},{"BasketItemId":0,"ProductId":10,"Name":"Trousers","UnitPrice":5.99,"Quantity":2,"BasketId":0}]}
